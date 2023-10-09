@@ -16,6 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Github Profile Search</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta charSet='UTF-8'></meta>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

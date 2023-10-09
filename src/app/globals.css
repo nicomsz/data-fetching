@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+::-webkit-scrollbar {
+    width: 4px; /* Largura da barra de rolagem no Chrome/Safari */
+    border-radius: 12px;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #000; /* Cor do polegar da barra de rolagem no Chrome/Safari */
+    border-radius: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #000; /* Cor do polegar da barra de rolagem no hover no Chrome/Safari */
+      border-radius: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da faixa de rolagem no Chrome/Safari */
+    border-radius: 12px;
+  }
+  
+  /* Estilos para a barra de rolagem no Firefox */
+  body {
+    scrollbar-width: thin; /* Define a largura da barra de rolagem no Firefox */
+    border-radius: 12px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #000; /* Cor do polegar da barra de rolagem no Firefox */
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #000; /* Cor do polegar da barra de rolagem no hover no Firefox */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da faixa de rolagem no Firefox */
+  }
